@@ -2,22 +2,30 @@
 
 const fs = require('fs');
 const path = require('path');
+const yargs = require('yargs').argv;
 const struct = require('./templates/initial-file-structure');
 
+const srcArg = yargs.d || 'src';
+const targetArg = yargs.t || 'test';
+
 function createDir(dirPath) {
-  const testPath = dirPath.replace(/src/, 'test');
+  const testPath = dirPath.replace(new RegExp(srcArg), targetArg);
   if (fs.existsSync(testPath)) return;
 
   fs.mkdirSync(testPath);
 }
 
 function createFile(filePath) {
-  const testPath = filePath.replace(/src/, 'test').replace(/.js/, '.spec.js');
+  if (path.extname(filePath) !== '.js') return;
+
+  const testPath = filePath.replace(new RegExp(srcArg), targetArg)
+    .replace(/.js/, `.spec.js`);
   if (fs.existsSync(testPath)) return;
 
-  const fileName = path.basename(testPath, '.spec.js');
-
-  fs.writeFileSync(testPath, struct(fileName), { encoding: 'utf8' });
+  const filenameWithoutExtension = path.basename(testPath, `.spec.js`);
+  fs.writeFileSync(testPath, struct(filenameWithoutExtension), {
+    encoding: 'utf8'
+  });
 }
 
 function recursivelyReadDir(dirPath) {
@@ -35,12 +43,11 @@ function recursivelyReadDir(dirPath) {
     });
 }
 
-function generate() {
-  if (!fs.existsSync(`${__dirname}/test`)) {
-    fs.mkdirSync(`${__dirname}/test`);
+(() => {
+  const targetDir = path.join(__dirname, targetArg);
+  if (!fs.existsSync(targetDir)) {
+    fs.mkdirSync(targetDir);
   } 
 
-  recursivelyReadDir(path.join(__dirname, 'src'), '');
-}
-
-generate();
+  recursivelyReadDir(path.join(__dirname, srcArg));
+})();

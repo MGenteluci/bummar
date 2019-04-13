@@ -13,5 +13,8 @@
     "generator"
   ],
   "author": "Matheus Genteluci <mgenteluci97@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^13.2.2"
+  }
 }
