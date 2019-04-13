@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const struct = require('./templates/file-initial-structure');
+const struct = require('./templates/initial-file-structure');
 
 function createDir(dirPath) {
   const testPath = dirPath.replace(/src/, 'test');
