@@ -1,13 +1,17 @@
 {
   "name": "bummar",
   "version": "1.0.0",
-  "description": "npm cli to automatically create test folders'",
+  "description": "npm cli generate test files",
   "main": "cli.js",
   "bin": {
     "create": "./cli.js"
   },
   "scripts": {},
-  "keywords": ["test", "structure", "generator"],
+  "keywords": [
+    "test",
+    "structure",
+    "generator"
+  ],
   "author": "Matheus Genteluci <mgenteluci97@gmail.com>",
   "license": "ISC"
 }
