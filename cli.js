@@ -22,10 +22,8 @@ function createFile(filePath) {
     .replace(/.js/, `.spec.js`);
   if (fs.existsSync(testPath)) return;
 
-  const filenameWithoutExtension = path.basename(testPath, `.spec.js`);
-  fs.writeFileSync(testPath, struct(filenameWithoutExtension), {
-    encoding: 'utf8'
-  });
+  const filenameWithoutExt = path.basename(testPath, `.spec.js`);
+  fs.writeFileSync(testPath, struct(filenameWithoutExt), { encoding: 'utf8' });
 }
 
 function recursivelyReadDir(dirPath) {
