@@ -6,15 +6,20 @@
   "bin": {
     "create": "./cli.js"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "jest"
+  },
   "keywords": [
     "test",
     "structure",
     "generator"
   ],
   "author": "Matheus Genteluci <mgenteluci97@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1"
   }
 }
