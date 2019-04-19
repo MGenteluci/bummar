@@ -49,3 +49,7 @@ function recursivelyReadDir(dirPath) {
 
   recursivelyReadDir(path.join(__dirname, srcArg));
 })();
+
+module.exports = {
+  createDir
+};
