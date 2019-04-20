@@ -7,6 +7,14 @@ cache:
   directories:
     - node_modules
 
+deploy:
+  provider: npm
+  email: $EMAIL
+  api_key: $NPM_API_KEY
+  skip_cleanup: true
+  on:
+    branch: master
+
 branches:
   only: master
 
