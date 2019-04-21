@@ -1,13 +1,14 @@
 {
   "name": "bummar",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "npm cli generate test files",
   "main": "cli.js",
   "bin": {
     "bummar": "./cli.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "keywords": [
     "test",
@@ -21,5 +22,19 @@
   },
   "devDependencies": {
     "jest": "^24.7.1"
+  },
+  "jest": {
+    "verbose": true,
+    "moduleNameMapper": {
+      "^yargs$": "<rootDir>/test/unit/mock/yargs.js"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 85,
+        "functions": 85,
+        "lines": 85,
+        "statements": -10
+      }
+    }
   }
 }
