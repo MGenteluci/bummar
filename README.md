@@ -13,7 +13,7 @@ npm i -g bummar
 generate for every .js in your src folder a .spec.js in folder test.
 
 ```shell
-bummar create
+bummar
 ```
 
 **Arguments**
