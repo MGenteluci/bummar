@@ -20,7 +20,8 @@ branches:
 
 install:
   - npm i
+  - npm i -g codecov
 
 script:
   - npm test
-  - npm run coverage
+  - codecov

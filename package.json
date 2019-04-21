@@ -7,8 +7,7 @@
     "bummar": "./cli.js"
   },
   "scripts": {
-    "test": "jest",
-    "coverage": "jest --coverage"
+    "test": "jest"
   },
   "keywords": [
     "test",
@@ -35,6 +34,8 @@
         "lines": 85,
         "statements": -10
       }
-    }
+    },
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
