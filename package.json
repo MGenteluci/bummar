@@ -1,10 +1,10 @@
 {
   "name": "bummar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "npm cli generate test files",
   "main": "cli.js",
   "bin": {
-    "create": "./cli.js"
+    "bummar": "./cli.js"
   },
   "scripts": {
     "test": "jest"
