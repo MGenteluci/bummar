@@ -1,6 +1,7 @@
 # Bummar
 
-![build-badge](https://travis-ci.org/MGenteluci/bummar.svg?branch=master)  
+![build-badge](https://travis-ci.org/MGenteluci/bummar.svg?branch=master)
+![codecov](https://codecov.io/gh/MGenteluci/bummar/branch/master/graph/badge.svg)  
 
 Bummar is a module to create test files base on your source dir.
 
