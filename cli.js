@@ -42,12 +42,11 @@ function recursivelyReadDir(dirPath) {
 }
 
 (() => {
-  const targetDir = path.join(__dirname, targetArg);
-  if (!fs.existsSync(targetDir)) {
-    fs.mkdirSync(targetDir);
+  if (!fs.existsSync(targetArg)) {
+    fs.mkdirSync(targetArg);
   }
 
-  recursivelyReadDir(path.join(__dirname, srcArg));
+  recursivelyReadDir(srcArg);
 })();
 
 module.exports = {
