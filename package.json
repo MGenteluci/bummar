@@ -1,14 +1,13 @@
 {
   "name": "bummar",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "npm cli generate test files",
   "main": "cli.js",
   "bin": {
     "bummar": "./cli.js"
   },
   "scripts": {
-    "test": "jest",
-    "coverage": "jest --coverage"
+    "test": "jest"
   },
   "keywords": [
     "test",
@@ -35,6 +34,8 @@
         "lines": 85,
         "statements": -10
       }
-    }
+    },
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
