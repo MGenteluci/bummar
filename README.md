@@ -1,8 +1,5 @@
 # Bummar
 
-![build-badge](https://travis-ci.org/MGenteluci/bummar.svg?branch=master)
-![codecov](https://codecov.io/gh/MGenteluci/bummar/branch/master/graph/badge.svg)  
-
 Bummar is a module to create test files base on your source dir.
 
 ## Installation
@@ -21,8 +18,8 @@ bummar
 
 **Arguments**
 
-* -d source folder. _defaults to src_  
-* -t target folder. _defaults to test_
+* `-d` source folder. `default to src`
+* `-t` target folder. `default to test`
 
 **Initial structure**  
 ```js
